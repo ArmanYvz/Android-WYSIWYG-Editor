@@ -314,7 +314,8 @@ public class InputExtensions extends EditorComponent {
                     for (int i = 0; i < s.length(); i++) {
                         if (s.charAt(i) == '\n') {
                             if (i == 0) {       //if first character is \n
-                                text = Html.toHtml("\n");       //convert newline to html text
+                                Spanned newLine = "\n";
+                                text = Html.toHtml(newLine);       //convert newline to html text
                             }
                             else {
                                 CharSequence subChars = s.subSequence(0, i);
